@@ -15,4 +15,7 @@ class Views
  
      end
 
+     def self.breeds_banner
+        
     end
+end

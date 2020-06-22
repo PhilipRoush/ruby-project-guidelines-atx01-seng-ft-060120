@@ -13,6 +13,7 @@ GEM
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
     coderay (1.1.3)
+    colorize (0.8.1)
     concurrent-ruby (1.1.6)
     equatable (0.6.1)
     i18n (1.8.3)
@@ -31,8 +32,10 @@ GEM
     rack (2.2.3)
     rack-protection (2.0.8.1)
       rack
+    rainbow (3.0.0)
     require_all (3.0.0)
     ruby2_keywords (0.0.2)
+    simple-random (1.0.3)
     sinatra (2.0.8.1)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -42,10 +45,21 @@ GEM
       activerecord (>= 4.1)
       sinatra (>= 1.0)
     sqlite3 (1.4.2)
+    strings (0.1.8)
+      strings-ansi (~> 0.1)
+      unicode-display_width (~> 1.5)
+      unicode_utils (~> 1.4)
+    strings-ansi (0.2.0)
+    table_print (1.5.7)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    tty-box (0.5.0)
+      pastel (~> 0.7.2)
+      strings (~> 0.1.6)
+      tty-cursor (~> 0.7)
     tty-color (0.5.1)
     tty-cursor (0.7.1)
+    tty-font (0.5.0)
     tty-prompt (0.21.0)
       necromancer (~> 0.5.0)
       pastel (~> 0.7.0)
@@ -55,8 +69,16 @@ GEM
       tty-screen (~> 0.7)
       wisper (~> 2.0.0)
     tty-screen (0.8.0)
+    tty-table (0.11.0)
+      equatable (~> 0.6)
+      necromancer (~> 0.5)
+      pastel (~> 0.7.2)
+      strings (~> 0.1.5)
+      tty-screen (~> 0.7)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
+    unicode-display_width (1.7.0)
+    unicode_utils (1.4.0)
     wisper (2.0.1)
     zeitwerk (2.3.0)
 
@@ -64,11 +86,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  colorize
   pry
+  rainbow
   require_all
+  simple-random
   sinatra-activerecord
   sqlite3
+  table_print
+  tty-box
+  tty-font
   tty-prompt
+  tty-table
 
 BUNDLED WITH
    2.1.4

@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
     has_many :favorites
     has_many :breeds, through: :favorites
 
+     
+
     def self.create_user
         Views.banner_willave
         new_user = User.get_name
@@ -22,7 +24,7 @@ class User < ActiveRecord::Base
                 puts "#{given_name} is already taken. Please choose a different name."
                  self.get_name 
             end
-        else 
+        else exit
             self.get_name
         end
     end
